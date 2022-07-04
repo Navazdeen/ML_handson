@@ -1,0 +1,2 @@
+- This repository contains the exercise file for Python and ML handson
+- 
