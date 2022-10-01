@@ -1,0 +1,70 @@
+LOGICAL OPERATORS
+
+AND Table
+
+True and True -> True
+True and False -> False
+False and True -> False
+False and False -> False
+
+OR Table 
+
+True or True -> True
+True or False -> True
+False or True -> True
+False or False -> False
+
+
+FOR LOOP:
+range
+how to create for loop?
+
+
+# player1="rock"
+# player2="paper"
+
+# if player1 == player2:
+#     print("draw")
+# elif player1=="rock" and player2=="paper":
+#     print("player2 Win's")
+# elif player1 == "rock" and player2=="scissor":
+#     print("player1 Win's")
+# elif player1=="paper" and player2=="rock":
+#     print("player1 win's")
+# elif player1=="paper" and player2=="scissor":
+#     print("player2 Win's")
+# elif player1=="scissor" and player2=="paper":
+#     print("player1 Win's")
+# elif player1 == "scissor" and player2=="rock":
+#     print("player2 Win's")
+
+# left_side = False
+# right_side = True
+
+# if left_side or right_side:
+#     print("Executed this print code")
+
+
+
+
+
+
+
+# range --> range(start, stop, step)
+
+lst = range(0, 100)
+
+for item in lst:
+    if item == 0:
+        print(item, "neither odd nor even")
+    elif item % 2 == 0:
+        print(item, "is even")
+    else:
+        print(item, "is odd")
+
+
+#  ANY Number 
+
+any number divided by 10 
+any number divided by 10 reminder = ?
+
