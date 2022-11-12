@@ -1,3 +1,4 @@
+import os
 board = [" " for _ in range(9)]
 
 def print_board(board):
@@ -43,14 +44,19 @@ def check_draw(board):
 
     
 while True:
+    os.system("cls")
     print_board(board)
     get_user_input(board, "X")
-    print_board(board)
     if check_winner(board, "X"):
         print("X Won the game")
         break
+    
+    if check_draw(board):
+        print("Game Draw")
 
 
+    os.system("cls")
+    print_board(board)
     get_user_input(board, "O")
     if check_winner(board, "O"):
         print("O Won the game")
