@@ -43,9 +43,10 @@
     position: absolute;
     bottom: 500px;
     animation: mymov 3s ease-in-out infinite;
+    box-shadow: black 5px 2px;
 }
 
 @keyframes mymov{
-    75% {bottom: 200px;}
+    50% {bottom: 200px;}
 }
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Bootsrap Tutorial</title>
+  </head>
+  <body>
+    <h1>Bootsrap Site</h1>
+
+    <!-- container and grid -->
+    <div class="container-xxl" style="border: solid 2px; padding: 20px">
+      <h2>
+        This is inside bootstrap container which breaks at the specified
+        breakpoint at the class level
+      </h2>
+      <div class="row" style="padding-bottom: 5px">
+        <div class="col" style="border: solid 2px; text-align: center">
+          Column 1
+        </div>
+        <div class="col" style="border: solid 2px; text-align: center">
+          Column 2
+        </div>
+        <div class="col" style="border: solid 2px; text-align: center">
+          Column 3
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="border: solid 2px; text-align: end">
+          Column 1
+        </div>
+        <div class="col" style="border: solid 2px; text-align: end">
+          Column 2
+        </div>
+        <div class="col" style="border: solid 2px">Column 3</div>
+        <div class="col" style="border: solid 2px">Column 4</div>
+      </div>
+    </div>
+
+    <!-- <div class="container position-absolute">
+      <img
+        class="image-fluid position-relative rounded float-start float-end"
+        width="800px"
+        height="600px"
+        src="../tortoise.jpg"
+        alt=""
+        style="justify-content: center"
+      />
+    </div> -->
+
+    <!-- table -->
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr class="table-warning">
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-primary">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr class="table-dark">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr class="table-info">
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- accordian -->
+    <div class="accordian" id="accordionExample">
+      <div class="accordian-item">
+        <h2 class="accordian-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            New Heading content
+          </button>
+        </h2>
+      </div>
+      <div
+        id="collapseOne"
+        class="accordian-collapse collapse"
+        aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          HTML is Hyper Text Markup language Example
+          <code>"wrtten inside html tag"</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- button -->
+    <div class="container">
+      <button class="btn btn-outline-success">Button</button>
+      <a href="./index.html" class="btn btn-primary">index page</a>
+    </div>
+
+    <!-- alert -->
+    <div class="container mt-4">
+      <div class="alert alert-danger">
+        Warning do not click the below button
+      </div>
+      <button class="btn btn-danger">Don't click</button>
+    </div>
+
+    <!-- badge -->
+    <div class="container mt-2">
+      This is the badge in bootstrap <span class="badge bg-success">Badge</span>
+    </div>
+
+    <!-- bread crumbs -->
+    <nav class="ms-5 mt-4" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Index</a></li>
+        <li class="breadcrumb-item"><a href="about.html">about</a></li>
+        <li class="breadcrumb-item active" aria-current="page">bootstrap</li>
+      </ol>
+    </nav>
+
+    <!-- card -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <img src="../tortoise.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../tortoise.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../tortoise.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<!-- try other bootstrap component -->
