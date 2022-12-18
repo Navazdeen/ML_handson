@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With CSS</title>
+  </head>
+  <body>
+    <h2 class="heading">This is my heading</h2>
+    <h3 id="smallheading">This is my second heading</h3>
+    <h2>This heading without class and id</h2>
+    <p>This is the paragraph with some text in it</p>
+
+    <h1 style="color: cyan; background-color: brown">
+      This heading with style as property
+    </h1>
+
+    <style>
+      :root {
+        background-color: black;
+      }
+      .heading {
+        color: brown;
+        background-color: black;
+      }
+      #smallheading {
+        color: blue;
+        background-color: blueviolet;
+      }
+      h2,
+      p {
+        color: chocolate;
+        background-color: red;
+      }
+    </style>
+  </body>
+</html>
