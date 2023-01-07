@@ -20,3 +20,13 @@ conda init
 conda create -n django-env
 conda activate django-env
 conda install django=4.1
+
+
+
+Templates tag
+================
+
+1. to define url = {% url '<patternname>' %}
+
+
+

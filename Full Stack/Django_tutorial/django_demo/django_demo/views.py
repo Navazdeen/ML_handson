@@ -1,5 +1,14 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("<h1>Heloworld</h1>")
+    return render(request, "Home/index.html")
+
+
+def about(request):
+    context = {
+        'number': range(1, 101),
+        'number2': 4
+    }
+    return render(request, "Home/about.html", context)
