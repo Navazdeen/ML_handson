@@ -1,0 +1,22 @@
+python -m venv <envname>
+
+    path to activate file to activate 
+    path to deactivate file to deactivate 
+
+pip list 
+pip install django
+
+
+django-admin startproject <projectName>
+python .\django_demo\manage.py runserver (To srart the development server)
+
+pip freeze
+
+
+
+For conda users
+conda init
+
+conda create -n django-env
+conda activate django-env
+conda install django=4.1
