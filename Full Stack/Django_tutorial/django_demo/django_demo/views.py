@@ -8,7 +8,7 @@ def index(request):
 
 def about(request):
     context = {
-        'number': range(1, 101),
+        'number': range(1, 20),
         'number2': 4
     }
     return render(request, "Home/about.html", context)

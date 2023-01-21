@@ -10,6 +10,14 @@ pip install django
 django-admin startproject <projectName>
 python .\django_demo\manage.py runserver (To srart the development server)
 
+To update change/initialize database in Django
+    1. python .\manage.py makemigrations
+    2. python .\manage.py migrate
+    3. python .\manage.py makemigrations
+
+To activate shell
+python .\manage.py shell
+
 pip freeze
 
 
@@ -30,3 +38,19 @@ Templates tag
 
 
 
+assignment 
+django fieltypes, constraints
+
+
+
+which pip
+where pip
+where python
+
+
+Set-ExecutionPolicy Unrestricted
+
+===================================\
+To create superuser
+
+python manage.py createsuperuser
