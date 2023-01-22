@@ -43,7 +43,7 @@
     <div class="container text-center">
       {% if img %}
       <div class="d-inline-block position-relative">
-        <a href="{% static 'asset/img/tmp.png' %}" download>
+        <a href="{% static 'tmp.png' %}" download>
           <span
             class="position-absolute top-0 start-100 translate-middle badge bg-success"
           >
@@ -52,7 +52,7 @@
           </span>
         </a>
         <img
-          src="{% static 'asset/img/tmp.png' %}"
+          src="{% static 'tmp.png' %}"
           class="rounded mx-auto d-block"
           alt="..."
           width="400"
