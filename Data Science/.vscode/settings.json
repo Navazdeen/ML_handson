@@ -1,3 +1,6 @@
 {
-  "notebook.output.textLineLimit": 50
+  "notebook.output.textLineLimit": 50,
+  "terminal.integrated.fontFamily": "'RobotoMono Nerd Font'",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.gpuAcceleration": "on"
 }

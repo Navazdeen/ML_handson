@@ -54,3 +54,6 @@ Set-ExecutionPolicy Unrestricted
 To create superuser
 
 python manage.py createsuperuser
+
+
+Extension to view db_sqlite :: SQLite Viewer "Florian Klampfer"
