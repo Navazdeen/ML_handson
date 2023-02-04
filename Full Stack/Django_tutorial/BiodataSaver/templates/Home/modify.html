@@ -26,6 +26,7 @@
             id="email"
             placeholder="name@example.com"
             name="Email"
+            value="{{student.Email}}"
           />
         </div>
         <div class="mb-3">
@@ -36,6 +37,7 @@
             id="Name"
             placeholder="Your Name"
             name="Name"
+            value="{{student.Name}}"
           />
         </div>
         <div class="mb-3">
@@ -46,6 +48,7 @@
             id="Age"
             placeholder="Your Age"
             name="Age"
+            value="{{student.Age}}"
           />
         </div>
         <div class="mb-3">
@@ -56,46 +59,23 @@
             id="Gender"
             name="Gender"
           >
-            <option value="None" selected>Select one</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
+            <option value="None">Select one</option>
+            <option value="M" {{Male}}>Male</option>
+            <option value="F" {{Female}}>Female</option>
           </select>
         </div>
         <div class="col-auto text-center">
-          <button type="submit" class="btn btn-primary mb-3">Submit</button>
+          <div class="btn-grp">
+            <a
+              type="button"
+              href="{% url 'index' %}"
+              class="btn btn-warning mb-3"
+              >Back</a
+            >
+            <button type="submit" class="btn btn-success mb-3">Modify</button>
+          </div>
         </div>
       </div>
     </form>
-    <div class="container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Age</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for student in Students %}
-          <tr>
-            <th scope="row">{{student.id}}</th>
-            <td>{{student.Name}}</td>
-            <td>{{student.Email}}</td>
-            <td>{{student.Age}}</td>
-            <td>{{student.Gender}}</td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <a type="button" href={% url 'delete' student.id %} class="btn btn-danger">Delete</a>
-                <a type="button" href={% url 'modify' student.id %} class="btn btn-warning">Modify</a>
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
   </body>
 </html>

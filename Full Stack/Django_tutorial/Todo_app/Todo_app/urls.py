@@ -1,4 +1,4 @@
-"""BiodataSaver URL Configuration
+"""Todo_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Home.views import index, delete, modify
-
+from checklist.views import index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index, name='index'),
-    path('delete/<int:id>', delete, name='delete'),
-    path('modify/<int:id>', modify, name='modify')
+    path('', index, name='index')
 ]
