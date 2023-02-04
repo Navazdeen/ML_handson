@@ -1,0 +1,8 @@
+pip install django==4.1
+
+django-admin
+
+pwd
+
+django-admin startproject demo
+

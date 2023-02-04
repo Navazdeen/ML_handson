@@ -16,7 +16,7 @@
     <title>TODO App</title>
   </head>
   <body>
-    <h1>Welcome to TODO application</h1>
+    <div class="h2 text-center mb-4">Welcome to TODO application</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -27,6 +27,51 @@
       crossorigin="anonymous"
     ></script>
 
+    <div class="container">
+      <div class="card text-center">
+        <div
+          class="card-header"
+          style="
+            background-image: linear-gradient(
+              to right,
+              skyblue,
+              rgb(30, 30, 156)
+            );
+          "
+        >
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a
+                class="active"
+                style="
+                  text-decoration: none;
+                  color: black;
+                  font-weight: bold;
+                  padding: 2px;
+                  font-size: 24px;
+                "
+                href="#"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="card-body list-group">
+          <ul class="container">
+            {% for checklist in checklists %}
+            <li class="d-flex">
+              <span class="p-1" style="color: skyblue">&#x2609;</span>
+              {% if checklist.completed %}
+              <del>{{checklist.title}}</del>
+              {% else %}
+              <div>{{checklist.title}}</div>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
