@@ -1,3 +1,4 @@
 #unnecessary files
 Ml-venv/
 */*/*.csv
+Full Stack/Django_tutorial/Todo_app/checklist/__pycache__/models.cpython-38.pyc
