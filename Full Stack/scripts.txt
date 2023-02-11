@@ -57,3 +57,8 @@ python manage.py createsuperuser
 
 
 Extension to view db_sqlite :: SQLite Viewer "Florian Klampfer"
+
+python manage.py shell
+
+python manage.py sqlflush
+python manage.py flush
