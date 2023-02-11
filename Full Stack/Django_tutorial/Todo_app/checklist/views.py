@@ -49,10 +49,15 @@ def signup(request):
         password = request.POST.get('password')
         email = request.Post.get('email')
         phone = request.Post.get('phone')
-        user = UserModel.objects.create(
-            username=username, password=password, email=email, phone=phone)
-        user.save()
-        login(request, user=user)
-        return redirect('index')
+        try:
+            user = UserModel.objects.create(
+                username=username, password=password, email=email, phone=phone)
+            user.save()
+            login(request, user=user)
+            return redirect('index')
+        except:
+            context
 
     return render(request, "signup.html", context)
+
+
