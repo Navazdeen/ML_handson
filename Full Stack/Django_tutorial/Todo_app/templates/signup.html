@@ -55,16 +55,16 @@
             </li>
             <li class="nav-item">
               <a
-                class="active p-2 text-dark h4 text-decoration-none text-decoration-underline hover-shadow"
+                class="active p-2 text-dark h4 text-decoration-underline hover-shadow"
                 href="#"
-                >Signin</a
+                >Signup</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="active p-2 text-dark h4 text-decoration-none hover-shadow"
-                href="{% url 'signup' %}"
-                >Signup</a
+                href="{% url 'signin' %}"
+                >Signin</a
               >
             </li>
           </ul>
@@ -73,7 +73,7 @@
           <div class="container mt-4">
             <form action="" method="post" novalidate>
               {% csrf_token %}
-              <!-- <div class="mb-3">
+              <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Email address</label
                 >
@@ -84,7 +84,7 @@
                   id="exampleFormControlInput1"
                   placeholder="name@example.com"
                 />
-              </div> -->
+              </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >User Name</label
@@ -99,6 +99,18 @@
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
+                  >Phone</label
+                >
+                <input
+                  name="phone"
+                  type="text"
+                  class="form-control {{Status}}"
+                  id="exampleFormControlInput1"
+                  placeholder="phone"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
                   >Password</label
                 >
                 <input
@@ -108,13 +120,13 @@
                   id="exampleFormControlInput1"
                   placeholder="password"
                 />
-                {% if Error %}
+                <!-- {% if Error %}
                 <div class="invalid-feedback">{{Error_msg}}</div>
-                {% endif %}
+                {% endif %} -->
               </div>
               <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">
-                  Login
+                  Sign Up
                 </button>
               </div>
             </form>

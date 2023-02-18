@@ -2,5 +2,8 @@
   "terminal.integrated.automationProfile.windows": {},
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
-  "terminal.integrated.fontSize": 18
+  "terminal.integrated.fontSize": 18,
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  }
 }

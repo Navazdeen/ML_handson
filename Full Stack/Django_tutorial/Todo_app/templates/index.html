@@ -12,6 +12,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
 
     <title>TODO App</title>
   </head>
@@ -25,6 +29,10 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
     ></script>
 
     <div class="container">
@@ -40,33 +48,51 @@
           "
         >
           <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item d-grid border-5">
+              <div class="text-light h4 me-2 justify-content-center">
+                Hello, {{user.username | capfirst}}
+              </div>
+            </li>
             <li class="nav-item">
               <a
-                class="active"
-                style="
-                  text-decoration: none;
-                  color: black;
-                  font-weight: bold;
-                  padding: 2px;
-                  font-size: 24px;
-                "
+                class="active p-2 text-dark h4 text-decoration-underline hover-shadow"
                 href="#"
                 >Home</a
               >
             </li>
+            <li class="nav-item">
+              <a
+                class="active p-2 text-dark h4 text-decoration-none hover-shadow"
+                href="{% url 'checklist_create' %}"
+                >Create Checklist</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="active p-2 text-dark h4 text-decoration-none hover-shadow"
+                href="{% url 'signout' %}"
+                >Signout</a
+              >
+            </li>
           </ul>
-          <div class="text-end text-light h4">{{user.username | capfirst}}</div>
         </div>
         <div class="card-body list-group">
           <ul class="container">
             {% for checklist in checklists %}
             <li class="d-flex">
-              <span class="p-1" style="color: skyblue">&#x2609;</span>
-              {% if checklist.completed %}
-              <del>{{checklist.title}}</del>
-              {% else %}
-              <div>{{checklist.title}}</div>
-              {% endif %}
+              <div>
+                <span class="p-1" style="color: skyblue">&#x2609;</span>
+
+                {% if checklist.completed %}
+                <del>{{checklist.title}}</del>
+                {% else %} {{checklist.title}} {% endif %}
+                <a
+                  href="{% url 'checklist_delete' checklist.id%}"
+                  class="text-decoration-none"
+                >
+                  <span class="p-1" style="color: orangered">&#9746;</span>
+                </a>
+              </div>
             </li>
             {% endfor %}
           </ul>

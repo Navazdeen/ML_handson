@@ -49,22 +49,22 @@
         >
           <ul class="nav nav-pills card-header-pills">
             <li class="nav-item d-grid border-5">
-              <div class="text-dark h4 me-2 justify-content-center">
-                {{user.username | capfirst}}
+              <div class="text-light h4 me-2 justify-content-center">
+                Hello, {{user.username | capfirst}}
               </div>
             </li>
             <li class="nav-item">
               <a
                 class="active p-2 text-dark h4 text-decoration-none text-decoration-underline hover-shadow"
-                href="#"
-                >Signin</a
+                href=""
+                >Create Checklist</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="active p-2 text-dark h4 text-decoration-none hover-shadow"
-                href="{% url 'signup' %}"
-                >Signup</a
+                class="active p-2 text-dark h4 text-decoration-none text-decoration-none hover-shadow"
+                href="{% url 'index' %}"
+                >Home</a
               >
             </li>
           </ul>
@@ -73,48 +73,33 @@
           <div class="container mt-4">
             <form action="" method="post" novalidate>
               {% csrf_token %}
-              <!-- <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="name@example.com"
-                />
-              </div> -->
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
-                  >User Name</label
+                  >Title</label
                 >
                 <input
-                  name="username"
+                  name="title"
                   type="text"
                   class="form-control {{Status}}"
                   id="exampleFormControlInput1"
-                  placeholder="Username"
+                  placeholder="title"
                 />
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Password</label
-                >
+              <div class="form-check-inline mb-4">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Completed
+                </label>
                 <input
-                  name="password"
-                  type="text"
-                  class="form-control {{Status}}"
-                  id="exampleFormControlInput1"
-                  placeholder="password"
+                  name="completed"
+                  class="form-check-input"
+                  type="checkbox"
+                  value="True"
+                  id="flexCheckDefault"
                 />
-                {% if Error %}
-                <div class="invalid-feedback">{{Error_msg}}</div>
-                {% endif %}
               </div>
               <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">
-                  Login
+                  Create
                 </button>
               </div>
             </form>

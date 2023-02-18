@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from checklist.views import index, signin, signup
+from checklist.views import index, signin, signup, signout, checklist_create, checklist_delete
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', index, name='index'),
     path('signin/', signin, name='signin'),
     path('signup/', signup, name='signup'),
+    path('signout/', signout, name='signout'),
+    path('checklist/create', checklist_create, name="checklist_create"),
+    path('checklist/delete/<int:id>', checklist_delete, name="checklist_delete")
 ]
