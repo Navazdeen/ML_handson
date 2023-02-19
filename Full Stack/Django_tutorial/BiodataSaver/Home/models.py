@@ -8,5 +8,13 @@ class StudentBio(models.Model):
     Age = models.IntegerField()
     Gender = models.CharField(max_length=1)
 
+    @classmethod
+    def search(cls, text):
+        return cls.objects.filter(Name__contains=text)
+
+    @classmethod
+    def sort(cls):
+        return cls.objects.all().order_by('Name', 'Email')
+
     def __str__(self):
         return self.Name
